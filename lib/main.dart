@@ -10,12 +10,17 @@ class myApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: HomeActivity());
+    return MaterialApp(
+        theme:ThemeData(primarySwatch: Colors.cyan) ,
+        darkTheme: ThemeData(primarySwatch: Colors.amber),
+        color: Colors.orange,
+        debugShowCheckedModeBanner: false,
+        home: HomeActivity());
   }
 }
 
 class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
+
 
   @override
   Widget build(BuildContext context) {
