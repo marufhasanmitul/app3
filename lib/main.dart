@@ -11,9 +11,9 @@ class myApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme:ThemeData(primarySwatch: Colors.cyan) ,
+        theme:ThemeData(primarySwatch: Colors.grey) ,
         darkTheme: ThemeData(primarySwatch: Colors.amber),
-        color: Colors.orange,
+        color: Colors.blue,
         debugShowCheckedModeBanner: false,
         home: HomeActivity());
   }
@@ -25,10 +25,34 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //Appbar=============
       appBar: AppBar(
         title: Text("My First app"),
+        titleSpacing: 0,
+        centerTitle: true,
+        toolbarHeight: 70,
+        toolbarOpacity: 1,
+        elevation: 10,
+        backgroundColor: Colors.red,
+
       ),
+
+
+
+
+
+
+      //Body===============
       body: Text('Hellow'),
+
+      //Drawer
+      //drawer:() ,
+      //endDrawer: (),
+      //bottomNavigationBar: ,
+      //floatingActionButton: ,
+
+
+
     );
 
 
