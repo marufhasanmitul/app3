@@ -1,4 +1,9 @@
+MySnackbar(message,context){
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message))
+    );
 
+  }
  //List Item
     //Json Array
     var MyItems=[
