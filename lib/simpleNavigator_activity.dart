@@ -36,10 +36,10 @@ class HomeActivity extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute( builder: (context)=>SecondPage()  ));
+            Navigator.push(context, MaterialPageRoute( builder: (context)=>SecondPage("This is form Home Page Text")  ));
           }, child: Text('SecondPage')),
           ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute( builder: (context)=>ThirdPage() ));
+            Navigator.push(context, MaterialPageRoute( builder: (context)=>ThirdPage("") ));
           }, child: Text('ThirdPage')),
         ],
       ),
@@ -53,15 +53,21 @@ class HomeActivity extends StatelessWidget{
 }
 
 class SecondPage extends StatelessWidget{
+  String msg;
+     SecondPage(
+      this.msg,
+      {super.key}
+      );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SecondPage'),
+        title: Text(msg),
       ),
       body: Center(
         child: ElevatedButton(onPressed: () { 
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>ThirdPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>ThirdPage("Second Activity text")));
         },child:Text('Go Third Page') ),
       ),
 
@@ -71,11 +77,21 @@ class SecondPage extends StatelessWidget{
 }
 
 class ThirdPage extends StatelessWidget{
+  String mymsfg;
+   ThirdPage(
+      this.mymsfg,
+      {super.key}
+
+      );
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Third Page'),
+        title: Text(mymsfg),
       ),
     );
   }
